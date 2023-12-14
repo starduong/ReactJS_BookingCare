@@ -25,11 +25,20 @@ const deteleUserService = (userId) => {
 const editUserService = (inputData) => {
     return axios.put('/api/edit-user', inputData);
 }
-    
+
+const getAllCodeService = (inputType) => {
+    return axios.get(`/api/allcode?type=${inputType}`)
+}
+
+const getTopDoctorHomeService = (limit) => {
+    return axios.get(`/api/top-doctor-home?limit=${limit}`)
+}
 export { 
     handleLoginApi, 
     getAllUsers, 
     createNewUserService, 
     deteleUserService, 
-    editUserService, 
+    editUserService,
+    getAllCodeService,
+    getTopDoctorHomeService,
 }
