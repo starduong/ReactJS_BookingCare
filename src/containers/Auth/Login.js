@@ -23,7 +23,7 @@ class Login extends Component {
             username: event.target.value
         })
     }
-        
+
     handleOnChangePassword = (event) => {
         this.setState({
             password: event.target.value
@@ -41,7 +41,7 @@ class Login extends Component {
             let data = await handleLoginApi(this.state.username, this.state.password);
             if (data && data.errCode !== 0) {
                 this.setState({
-                    errMessage: data.message 
+                    errMessage: data.message
                 })
             }
             if (data && data.errCode === 0) {
@@ -56,11 +56,11 @@ class Login extends Component {
                     })
                 }
             }
-            console.log('hoidanit ', error)
+            console.log('check error ', error)
             // this.setState({
             // errMessage: e.message
             // })
-        }    
+        }
     }
 
     handleShowHidePassword = () => {
@@ -68,6 +68,13 @@ class Login extends Component {
             isShowPassword: !this.state.isShowPassword
         })
     }
+
+    handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            this.handleLogin();
+        }
+    }
+
     render() {
         return (
             <div className="login-background">
@@ -76,32 +83,33 @@ class Login extends Component {
                         <div className="col-12 text-login">Login</div>
                         <div className="col-12 form-group login-input" >
                             <label>Username:</label>
-                            <input type="text" className="form-control" placeholder="Enter your username" 
-                            value={this.state.username}
-                            onChange={(event) => this.handleOnChangeUsername(event)}
-                        />
+                            <input type="text" className="form-control" placeholder="Enter your username"
+                                value={this.state.username}
+                                onChange={(event) => this.handleOnChangeUsername(event)}
+                            />
                         </div>
                         <div className="col-12 form-group login-input" >
                             <label>Password:</label>
                             <div className="custom-input-password">
-                            <input 
-                            type={this.state.isShowPassword ? 'text' : 'password'} 
-                            className="form-control" placeholder="Enter your password" 
-                            onChange={(event) => { this.handleOnChangePassword(event)}}
-                        />
-                            <span 
-                            onClick={() => {this.handleShowHidePassword()}}
+                                <input
+                                    type={this.state.isShowPassword ? 'text' : 'password'}
+                                    className="form-control" placeholder="Enter your password"
+                                    onChange={(event) => { this.handleOnChangePassword(event) }}
+                                    onKeyDown={(event) => this.handleKeyDown(event)}
+                                />
+                                <span
+                                    onClick={() => { this.handleShowHidePassword() }}
 
-                            ><i className={this.state.isShowPassword ? 'far fa-eye' : 'far fa-eye-slash'}></i>
-                            </span>
-                            </div>   
+                                ><i className={this.state.isShowPassword ? 'far fa-eye' : 'far fa-eye-slash'}></i>
+                                </span>
+                            </div>
                         </div>
 
-                        <div className='col-12' style={{ color: 'red'}}>
+                        <div className='col-12' style={{ color: 'red' }}>
                             {this.state.errMessage}
-                            </div>
+                        </div>
                         <div className="col-12">
-                        <button className="btn-login" onClick={() => {this.handleLogin()}} >Login</button>
+                            <button className="btn-login" onClick={() => { this.handleLogin() }} >Login</button>
                         </div>
 
                         <div className="col-12">
