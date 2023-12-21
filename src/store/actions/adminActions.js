@@ -280,6 +280,7 @@ export const fetchAllScheduleTime = () => {
     return async (dispatch, getState) => {
         try {
             let res = await getAllCodeService("TIME");
+            // console.log('API Response:', res);
             if (res && res.errCode === 0) {
                 dispatch({
                     type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_SUCCESS,

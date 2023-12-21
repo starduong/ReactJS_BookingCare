@@ -8,7 +8,10 @@
         
         .content-left {
             width : 20%;
-            background : center center no-repeat;
+            background-size : cover;
+            background-repeat : no-repeat;
+            background-position: center;
+            // background : center center no-repeat;
             width : 200px;
             height : 200px;
             border-radius: 50%;
