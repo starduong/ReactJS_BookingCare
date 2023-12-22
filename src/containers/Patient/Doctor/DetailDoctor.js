@@ -6,8 +6,8 @@ import { getDetailInforDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
-import LikeAndShare from '../SocialPlugin/LikeAndShare';
-import Comment from '../SocialPlugin/Comment';
+import LikeButtonComponent from '../SocialPlugin/LikeButtonComponent';
+import CommentUpdate from '../SocialPlugin/CommentUpdate';
 
 class DetailDoctor extends Component {
     constructor(props) {
@@ -79,6 +79,7 @@ class DetailDoctor extends Component {
                                     </span>
                                 }
                                 <div className="like-share-plugin">
+                                    <LikeButtonComponent dataHref="https://developers.facebook.com/docs/plugins/" />
                                     {/* <LikeAndShare
                                         dataHref={currentURL}
                                     /> */}
@@ -105,6 +106,7 @@ class DetailDoctor extends Component {
                         }
                     </div>
                     <div className="comment-doctor">
+                        <CommentUpdate dataHref="https://developers.facebook.com/docs/plugins/comments#configurator" />
                         {/* <Comment
                             dataHref={currentURL}
                             width={"100%"}

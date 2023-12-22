@@ -48,3 +48,92 @@
         }
     }
 }
+
+// $gradient-start: #ed6ea0;
+// $gradient-end: #ec8c69;
+// .header-container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 0 5rem;
+//   box-sizing: border-box;
+//   background-image: linear-gradient(to right, $gradient-start 0%, $gradient-end 100%);
+//   border-radius: 0.5rem;
+//   text-transform: uppercase;
+//   box-shadow: inset 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+
+//   .header-tabs-container {
+//     // Your existing styles for Navigator component
+//     // For example, if Navigator has a class name "menu", you can do:
+//     .menu {
+//       display: flex;
+
+//       > li {
+//         position: relative;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//       }
+
+//       // Add your existing styles for menu items here
+
+//       &:hover,
+//       &:focus-within {
+//         > li:first-child > a {
+//           opacity: 0.6;
+//         }
+//       }
+
+//       > li {
+//         flex: 1 1 0;
+
+//         &:last-child:after {
+//           // Your existing styles for the last item's after pseudo-element
+//           content: '';
+//           position: absolute;
+//           top: 0;
+//           width: 100%;
+//           bottom: 0;
+//           margin-right: -50%;
+//           background: rgba(0, 0, 0, 0.1);
+//           border-radius: 0.5rem;
+//           z-index: 0;
+//           transition: 350ms cubic-bezier(1, 0.49, 0.09, 1.29) all;
+//           pointer-events: none;
+//         }
+
+//         // Your existing styles for li items
+//       }
+//     }
+//   }
+
+//   .languages {
+//     // Your existing styles for the languages container
+
+//     .welcome {
+//       // Your existing styles for the welcome message
+//     }
+
+//     .language-vi,
+//     .language-en {
+//       // Your existing styles for language buttons
+//     }
+
+//     .btn-logout {
+//       // Your existing styles for the logout button
+//     }
+//   }
+
+//   // Media queries for responsiveness
+//   @media (min-width: 45rem) {
+//     .header-tabs-container {
+//       // Your existing styles for larger screens
+//     }
+//   }
+
+//   @media (max-width: 45rem) {
+//     .header-tabs-container {
+//       // Your existing styles for smaller screens
+//     }
+//   }
+// }

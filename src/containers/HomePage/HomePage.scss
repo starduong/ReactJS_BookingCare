@@ -109,6 +109,9 @@
             .title-section {
                 font-size : 22px;
                 font-weight: 600;
+                color: #121212;
+                text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+                            0px -4px 10px rgba(255,255,255,0.3);
             }
 
             .btn-section {
@@ -152,10 +155,34 @@
 .home-footer {
     text-align: center;    
     padding-top: 8px;
-    
-    a {    
-        text-decoration: unset;
-    }
+    color: #121212;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+    .section-share.home-footer {
+            display: flex;
+            flex-direction: column; // Sắp xếp các thành phần theo chiều dọc
+
+            &.block {
+                flex: 1; // Đặt độ rộng và chiều cao để lấp đầy khoảng trống
+
+            &.about-support-icon {
+                // Kiểu dáng cho biểu tượng hỗ trợ
+                i {
+                    font-size: 2rem; // Đặt kích thước của biểu tượng
+                }
+            }
+
+            &.about-support-contact {
+                // Kiểu dáng cho liên hệ hỗ trợ
+                p {
+                    a {
+                        color: blue; // Màu cho liên kết
+                        text-decoration: none; // Loại bỏ gạch chân
+                    }
+                }
+            }
+        }
+    }   
 }
 
 .section-about {
