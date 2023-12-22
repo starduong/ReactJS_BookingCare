@@ -53,22 +53,29 @@
         border-bottom: 1px solid rgba(110, 107, 107, 0.674);
     }
     
-    .section-body {    
+    .section-body {  
         .section-customize {
+            text-align: center;
+            
             .bg-image {
                 width : 278px;
                 height : 150px;
                 background-position: center center;
                 background-repeat : no-repeat;
                 background-size : cover;
-                background-color : #eee;
+                border: 0.5px solid orange;
+                cursor: pointer;
+                // background-color : #eee;
 
                 &.section-specialty {               
                     // background-image: url('../../assets/specialty/than-kinh.png');                  
+                    
                 }
                     
-                &.section-medical-facility {                    
-                    background-image: url('../../assets/medical-facility/dai-hoc-y-duoc.png');
+                &.section-medical-facility {
+                    
+                    background-size : contain;      
+                    // background-image: url('../../assets/medical-facility/dai-hoc-y-duoc.png');
                 }
                     
                 &.section-outstanding-doctor {    
