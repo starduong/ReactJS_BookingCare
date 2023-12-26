@@ -118,7 +118,7 @@ class ProfileDoctor extends Component {
                 {isShowLinkDetail === true &&
                     <div className="view-detail-doctor"
                     >
-                        <Link to={`/detail-doctor/${doctorId}`}>Xem thêm</Link>
+                        <Link to={`/detail-doctor/${doctorId}`}><FormattedMessage id="homepage.more-infor" /></Link>
                     </div>
                 }
                 {isShowPrice === true &&

@@ -39,6 +39,7 @@ class Specialty extends Component {
                         <span className="title-section">
                             <FormattedMessage id="homepage.specialty-poplular" />
                         </span>
+
                         <button className="btn-section">
                             <FormattedMessage id="homepage.more-infor" />
                         </button>

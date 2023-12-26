@@ -16,6 +16,27 @@ class HomeFooter extends Component {
                     <div className="section-share home-footer block about-support-icon">
                         <i className="fa fa-paper-plane"></i>
                     </div>
+                    <div className="social-network">
+                        <section>
+                            <ul className="icon-list">
+                                <li className="icon-item">
+                                    <a href="#" className="icon-link"><i className="fab fa-instagram"></i></a>
+                                </li>
+                                <li className="icon-item">
+                                    <a href="#" className="icon-link"><i className="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li className="icon-item">
+                                    <a href="#" className="icon-link"><i className="fab fa-dribbble"></i></a>
+                                </li>
+                                <li className="icon-item">
+                                    <a href="#" className="icon-link"><i className="fab fa-youtube"></i></a>
+                                </li>
+                                <li className="icon-item">
+                                    <a href="#" className="icon-link"><i className="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                     <h2>Hỗ trợ đặt lịch</h2>
                     <h3> Xin vui lòng liên hệ với đội ngũ BookingCare để được hỗ trợ </h3>
                     <div className="section-share home-footer block about-support-contact">
@@ -25,6 +46,7 @@ class HomeFooter extends Component {
                     </div>
                 </div>
             </div>
+
         );
     }
 }

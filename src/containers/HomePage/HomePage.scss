@@ -1,14 +1,15 @@
 //reset slick slider css
 .slick-prev {
     left : -10px !important;    
-    z-index : 1000 !important;    
-    height : 48px !important;   
-    width : 44px !important;   
+    z-index : 50;    
+    height : 30px !important;   
+    width : 30px !important;   
     background: #fff !important;   
     border : 2px solid #d7d7d7 !important;
+    border-radius: 50%;
 
     &:hover {   
-    background: #eceaea !important;   
+    background: #7fdcdc !important;   
     }
 }
     
@@ -16,20 +17,21 @@
 .slick-next:before {    
     font-family: FontAwesome !important;    
     color    
-    : red !important;    
+    : rgb(255, 102, 0) !important;    
     // content: "\f060" !important;    
 }
 
 .slick-next {
     right : -10px !important;    
-    z-index : 1000 !important;    
-    height : 48px !important;    
-    width : 44px !important;   
-    background: ■#fff !important;    
-    border : 2px solid #d7d7d7 !important;   
+    z-index : 50;    
+    height : 30px !important;    
+    width : 30px !important;   
+    background: #fff !important;    
+    border : 2px solid #d7d7d7 !important;  
+    border-radius: 50%; 
 
     &:hover {    
-    background: #eceaea !important;    
+    background: #7fdcdc !important;    
     }    
 }
 
@@ -114,20 +116,23 @@
                             0px -4px 10px rgba(255,255,255,0.3);
             }
 
+
             .btn-section {
+                border-radius: 20px;
                 float : right;               
                 padding: 10px 15px;
                 border: none;                
                 outline: none;                
                 display: block;                
-                background: #ebebeb;
+                background: hsla(0, 2%, 51%, 0.42);
                 color: black;                
                 cursor: pointer;
                 text-transform: uppercase;
+
                 
                 &:hover {
                     color : #fff;
-                    background: #f7d800;
+                    background: #0063f7;
                 }                
             }
         }
@@ -154,10 +159,97 @@
 
 .home-footer {
     text-align: center;    
-    padding-top: 8px;
+    padding-top: 10px;
     color: #121212;
     text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
     background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+.home-footer *{
+    padding: 5px;
+}
+:root {
+	-bg: #dcdde1;
+	-color-icon: #535c68;
+	-social-icon1: #e4405f;
+	-social-icon2: #3b5999;
+	-social-icon3: #e4405f;
+	-social-icon4: #cd201f;
+	-social-icon5: #0077B5;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+section {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg);
+	z-index: -10;
+}
+.icon-list {
+	width: 100%;
+	max-width: 40rem;
+	padding: 0 1.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+.icon-item {
+	list-style: none;
+	&:nth-child(1) a:hover:before {
+		background: var(--social-icon1);
+	}
+	&:nth-child(2) a:hover:before {
+		background: var(--social-icon2);
+	}
+	&:nth-child(3) a:hover:before {
+		background: var(--social-icon3);
+	}
+	&:nth-child(4) a:hover:before {
+		background: var(--social-icon4);
+	}
+	&:nth-child(5) a:hover:before {
+		background: var(--social-icon5);
+	}
+}
+.icon-link {
+	display: inline-flex;
+	font-size: 3rem;
+	text-decoration: none;
+	color: var(--color-icon);
+	width: 6rem;
+	height: 6rem;
+	transition: .5s linear;
+	position: relative;
+	z-index: 1;
+	margin: auto;
+	&:hover {
+		color: #fff;
+		&::before {
+			transform: scale(1);
+		}
+	}
+	i {
+		margin: auto;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 6rem;
+		height: 6rem;
+		background: #000;
+		border-radius: 50%;
+		z-index: -1;
+		transform: scale(0);
+		transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+	}
+}
+
     .section-share.home-footer {
             display: flex;
             flex-direction: column; // Sắp xếp các thành phần theo chiều dọc

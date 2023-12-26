@@ -106,7 +106,7 @@ class DetailDoctor extends Component {
                         }
                     </div>
                     <div className="comment-doctor">
-                        <CommentUpdate dataHref="https://developers.facebook.com/docs/plugins/comments#configurator" />
+                        <CommentUpdate dataHref="https://www.statnews.com/2023/12/19/ftc-doj-hhs-health-counsels/" />
                         {/* <Comment
                             dataHref={currentURL}
                             width={"100%"}
